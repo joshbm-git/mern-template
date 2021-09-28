@@ -10,6 +10,10 @@ function Recipe(props) {
       <h3>Recipe: {recipe.title}</h3>
 
       <p>{recipe.description}</p>
+
+      <p>{recipe.ingredients}</p>
+
+      <p>{recipe.time}</p>
     </>
   );
 }

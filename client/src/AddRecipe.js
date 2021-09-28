@@ -4,8 +4,9 @@ function AddRecipe(props) {
   const { addRecipe } = props;
 
   const [title, setTitle] = useState("");
-  const [desc, setDesc] = useState("");
+  const [description, setDescription] = useState("");
   const [ingredients, setIngredients] = useState("");
+  const [time, setTime] = useState("");
 
   // Conditional rendering
   return (
@@ -13,12 +14,13 @@ function AddRecipe(props) {
       <h3>Add Recipe</h3>
 
       <input onChange={(event) => setTitle(event.target.value)} type="text" />
-      <input onChange={(event) => setDesc(event.target.value)} type="text" />
+      <input onChange={(event) => setDescription(event.target.value)} type="text" />
       <input onChange={(event) => setIngredients(event.target.value)} type="text" />
+      <input onChange={(event) => setTime(event.target.value)} type="text" />
 
       <button type="button" onClick={(event) => {
         const ingArray = ingredients.split(" ");
-        addRecipe(title, desc, ingArray);
+        addRecipe(title, description, ingArray, time);
       }}>Add Recipe
       </button>
     </>
